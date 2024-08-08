@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quantity</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color:pink;
+        }
+        .continer{
+            height: 60vh;
+            width: 30vw;
+            background-color:white;
+            display: block;
+            margin: 20vh auto;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          
+        }
+        .continer img {
+            height: 32vh;
+        }
+        .img-add{
+            height: 9px;
+            cursor: pointer;
+        }
+        .btn{
+            display: flex;
+            
+        }
+        .btn img{
+            height: 38px;
+        }
+        .btn span{
+            font-size: 3vw;
+            margin: 0 20px;
+        }
+        .btto button{
+            height: 6vh;
+            width: 12vw;
+            margin: 10vh 0;
+            border-radius: 10px;
+            background-color: rgb(191, 191, 233);
+            font-size: 1.5vw;
+            cursor: pointer;
+        
+
+        }
+        
+
+    </style>
+    <div class="continer">
+        <img src="img1.png" alt="">
+
+
+    <div class="btn">
+    <img src="plus1.png" alt="" class="img-add" id="plus" onclick="chekquentity('add')">
+    <span id="result">1</span>
+    <img src="minus.png" alt="" class="img-add" onclick="chekquentity('sub')">
+    
+    </div>
+    <div class="btto">
+    <button >buy now</button>
+    </div>
+</div>
+
+<script>
+     function chekquentity(opration){
+        let result = document.getElementById('result')
+        let count = parseInt(result.innerText)
+        if (opration === "add" && count <5){
+          ++count;
+          result.innerText=count
+         
+        }else if(opration=== "sub"&& count>=1){
+            --count;
+            result.innerText=count
+     }
+
+    }
+
+</script>
+    
+</body>
+</html>
